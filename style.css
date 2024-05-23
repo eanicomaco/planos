@@ -1,0 +1,190 @@
+body{
+    background-color: #01080E;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.barraSuperior{
+    width: 100%;
+    background-color: #000;
+    height: 80px;
+    color: #fff;
+    text-align: center;
+}
+.container{
+    max-width: 90%;
+}
+.conteudo{
+    display: flex;
+    gap: 20px; /* define o espaçamento entre as divs */
+    flex-wrap: wrap; /* deixa fixa a largura das divs */
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px;
+}
+.animacao{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    color: #2BDEFD;
+    border: 1px solid #2BDEFD;
+    border-radius: 75px;
+    top: -40px;
+    left: 350px;
+    z-index: 2;
+    overflow: hidden;
+    background-image: url(./img/desejado.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: loading 50s linear infinite;
+    z-index: 55;
+}
+/* .animacao i{
+    transform: rotate(45deg);
+    font-size: 6rem;
+    margin-top: 6px;
+
+} */
+.cardPlanos{
+    position: relative;
+    width: 565px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-top: 15px solid #2BDEFD;
+    padding: 50px;
+}
+.cardPlanos::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+    background-color: #175A70;
+    z-index: -1;
+    transform: translateY(-1px);
+}
+.cardPlanos::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+    border: 1px solid #165166;
+    background-color: #08142C;
+    z-index: 2;
+}
+.cardConteudo{
+    position: relative;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #D7F9FF;
+    z-index: 3;
+}
+.cardPlanos img{
+    display: block;
+    background-color: #09273C;
+    margin: auto;
+    padding: 15px;
+    width: 90px;
+    border: 1px solid #2BDEFD;
+    border-radius: 45px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.tituloPlano{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.desconto{
+    background-color: #FC2B89;
+    padding: 4px 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.precoDe span{
+    position: relative;
+    font-family: "Chakra Petch", sans-serif;
+    color: #FC2B89;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.precoDe span::after{
+    content: "";
+    top: 0;
+    left: -4px;
+    border-bottom: 3px solid #a8adb2;
+    position: absolute;
+    width: 102%;
+    height: 50%;
+    transform: rotate(-10deg);
+}
+.precoPara span{
+    font-family: "Chakra Petch", sans-serif;
+    color: #2BDEFD;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.aVista{
+    margin: -30px 0 30px 0;
+}
+p.acesso{
+    background-color: #142342;
+    border: 1px solid #165166;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+p.acesso span{
+    color: #2BDEFD;
+}
+.materias{
+    margin-left: 40px;
+    text-align: left;
+}
+.materias i.fa-check{
+    font-size: 1.6rem;
+    color: #2BDEFD;
+}
+.btnMatricula{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    padding: 30px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.btnMatricula::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2BFDBE;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+.btnMatricula:hover{
+    color: #000;
+}
+@keyframes loading {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(-1turn);
+        transform: rotate(-1turn);
+    }
+}
